@@ -1,3 +1,4 @@
+import 'package:attandance_system/screens/signup_page.dart';
 import 'package:flutter/material.dart';
 
 class LogPageOne extends StatefulWidget {
@@ -13,7 +14,7 @@ class _LogPageOneState extends State<LogPageOne> {
     return  Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("attandance system"),
+        title: Text(" Faculty attandance system"),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -91,6 +92,7 @@ class _LogPageOneState extends State<LogPageOne> {
                         padding: const EdgeInsets.only(left:1.0),
                         child: InkWell(
                             onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=> SignupPage()));
                               print('hello');
                             },
                             child: Text('Sign Up here.', style: TextStyle(fontSize: 14, color: Colors.blue),)),

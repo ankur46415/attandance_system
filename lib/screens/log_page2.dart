@@ -1,4 +1,7 @@
+import 'package:attandance_system/screens/signup_page.dart';
 import 'package:flutter/material.dart';
+
+import 'home/home_screen.dart';
 
 class LogPageTwo extends StatefulWidget {
   const LogPageTwo({super.key});
@@ -66,6 +69,7 @@ class _LogPageTwoState extends State<LogPageTwo> {
                     child: Text( 'Log in ', style: TextStyle(color: Colors.blue, fontSize: 20,),
                     ),
                     onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>  HomeScreen()));
                       print('Successfully log in ');
                     },
 
@@ -91,6 +95,7 @@ class _LogPageTwoState extends State<LogPageTwo> {
                         padding: const EdgeInsets.only(left:1.0),
                         child: InkWell(
                             onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=> SignupPage()));
                               print('hello');
                             },
                             child: Text('Sign Up here.', style: TextStyle(fontSize: 14, color: Colors.blue),)),
